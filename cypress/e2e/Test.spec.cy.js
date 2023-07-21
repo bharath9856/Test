@@ -1,5 +1,4 @@
 
-    const assert = require('assert');
     
     class Node {
       constructor(song, user) {
