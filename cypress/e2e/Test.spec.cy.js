@@ -86,14 +86,17 @@
     store.addPlay("S3", "User1");
 
     console.log(store.getRecentlyPlayedSongs("User1")); // Output: ["S3", "S2", "S1"]
-    
+    assert.deepStrictEqual(store.getRecentlyPlayedSongs("User1"), ["S3", "S2", "S1"]);
+
     store.addPlay("S4", "User1");
+    assert.deepStrictEqual(store.getRecentlyPlayedSongs("User1"), ["S4", "S3", "S2"]);
     console.log(store.getRecentlyPlayedSongs("User1")); // Output: ["S4", "S3", "S2"]
     
     store.addPlay("S2", "User1");
+    assert.deepStrictEqual(store.getRecentlyPlayedSongs("User1"), ["S2", "S4", "S3"]);
     console.log(store.getRecentlyPlayedSongs("User1")); // Output: ["S2", "S4", "S3"]
     
     store.addPlay("S1", "User1");
+    assert.deepStrictEqual(store.getRecentlyPlayedSongs("User1"), ["S1", "S2", "S4"]);
     console.log(store.getRecentlyPlayedSongs("User1")); // Output: ["S1", "S2", "S4"]
-    
 
