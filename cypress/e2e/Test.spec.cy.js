@@ -1,5 +1,4 @@
 
-
     
     class Node {
       constructor(song, user) {
@@ -85,8 +84,8 @@
     store.addPlay("S2", "User1");
     store.addPlay("S3", "User1");
 
-    console.log(store.getRecentlyPlayedSongs("User1")); // Output: ["S3", "S2", "S1"]
     assert.deepStrictEqual(store.getRecentlyPlayedSongs("User1"), ["S3", "S2", "S1"]);
+    console.log(store.getRecentlyPlayedSongs("User1")); // Output: ["S3", "S2", "S1"]
 
     store.addPlay("S4", "User1");
     assert.deepStrictEqual(store.getRecentlyPlayedSongs("User1"), ["S4", "S3", "S2"]);
