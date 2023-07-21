@@ -84,7 +84,7 @@
     store.addPlay("S1", "User1");
     store.addPlay("S2", "User1");
     store.addPlay("S3", "User1");
-    
+
     console.log(store.getRecentlyPlayedSongs("User1")); // Output: ["S3", "S2", "S1"]
     
     store.addPlay("S4", "User1");
